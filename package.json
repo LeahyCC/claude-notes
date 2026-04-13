@@ -1,0 +1,25 @@
+{
+  "name": "claude-notes",
+  "version": "1.0.0",
+  "description": "A lightweight MCP server that gives Claude Code persistent, project-based note-taking with markdown storage.",
+  "type": "module",
+  "main": "./index.js",
+  "bin": {
+    "claude-notes": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeahyCC/claude-notes.git"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "notes",
+    "model-context-protocol",
+    "claude-code"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
