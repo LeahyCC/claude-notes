@@ -50,7 +50,27 @@ Add the server to your Claude Code settings (`~/.claude/settings.json`):
 
 Replace `/absolute/path/to/claude-notes/` with the actual path where you cloned the repo.
 
-### 3. Start using it
+### 3. Custom storage location (optional)
+
+By default, notes are stored in the `notes/` directory inside this repo. To store notes elsewhere — like a private git repo or a synced folder — set the `CLAUDE_NOTES_STORAGE` environment variable:
+
+```json
+{
+  "mcpServers": {
+    "claude-notes": {
+      "command": "node",
+      "args": ["/absolute/path/to/claude-notes/index.js"],
+      "env": {
+        "CLAUDE_NOTES_STORAGE": "/path/to/your/notes-repo"
+      }
+    }
+  }
+}
+```
+
+This lets you keep the server updatable (pull upstream changes) while storing notes in a separate private repo, a Dropbox/iCloud folder, or anywhere else on disk.
+
+### 4. Start using it
 
 Restart Claude Code and start adding notes:
 

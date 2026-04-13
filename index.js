@@ -8,10 +8,11 @@ import {
 import fs from 'fs/promises';
 import path from 'path';
 
-const NOTES_DIR = path.join(
+const DEFAULT_DIR = path.join(
   path.dirname(new URL(import.meta.url).pathname),
   'notes'
 );
+const NOTES_DIR = process.env.CLAUDE_NOTES_STORAGE || DEFAULT_DIR;
 const ARCHIVE_DIR = path.join(NOTES_DIR, 'archive');
 
 // ── Markdown helpers ─────────────────────────────────────────────────────────
